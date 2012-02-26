@@ -93,7 +93,7 @@ exports.processGeography = processGeography;
 
 function getMedia(callback){
     // This function gets the most recent media stored in redis
-  redisClient.lrange('media:objects', 0, 19, function(error, media){
+  redisClient.lrange('media:objects', 0, 20, function(error, media){
       debug("getMedia: got " + media.length + " items");
       // Parse each media JSON to send to callback
       media = media.map(function(json){return JSON.parse(json);});

@@ -87,7 +87,7 @@ a:hover {
   text-transform: uppercase;
   color: #fff;
 }
-
+/*
 .cube .location {
   right: 0;
   bottom: 3px;
@@ -97,7 +97,7 @@ a:hover {
   bottom: 17px;
   font-weight:bold;
 }
-
+*/
 .container {
 	position: absolute;
 	height: 200px;

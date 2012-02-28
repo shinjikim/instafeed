@@ -1,4 +1,5 @@
 div#wrapper
+  ul
     != partial('partials/image', images)
 .cols
   .col-1

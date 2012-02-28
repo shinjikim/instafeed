@@ -11,20 +11,19 @@ socket.on('message', function(update){
 var Media = {
     onNewMedia: function(ev) {
       $(ev.media).each(function(index, media) {
-        var numChildren = $('#wrapper').children().length;
-        var index = Math.floor(Math.random() * numChildren);
-        
-        if(index % 2 == 0) {
-          //index = index + numChildren/10;
-          var $oldCube = $($('#wrapper').children()[index]);
-          $('img', $oldCube).fadeOut("slow");
-          $('img', $oldCube).attr('src', media.images.low_resolution.url);
-          $('img', $oldCube).fadeIn("slow");
-        } else {
+        //var numChildren = $('#wrapper').children().length;
+        //var index = Math.floor(Math.random() * numChildren);
+        //if(index % 2 == 0) {
+        //  var $container = $($('#wrapper').children()[0]);
           $('#wrapper').append(
-              '<div class="container"><img src='+media.images.low_resolution.url+' width="200" height="200"></div>'
-          ); 
-        }
+            '<div class="container"><img src='+media.images.low_resolution.url+' width="200" height="200"></div>'
+          );
+        /*} else {
+          var $oldCube = $('.img', $container);
+          $oldCube.fadeOut("slow");
+          $oldCube.attr('src', media.images.low_resolution.url);
+          $oldCube.fadeIn("slow");
+        }*/
       });
     },
     positionAll: function() {

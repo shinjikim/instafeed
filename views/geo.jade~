@@ -1,5 +1,20 @@
+script( type="text/javascript")
+  $(document).ready(function(){
+    var imageList = [];
+  });
+
 div#wrapper
-  ul
+    != "<script type='text/javascript'>"
+    != "var imageList = [];"
+    - var imageList = [];
+    each image in images
+      each val, key in image.images.low_resolution
+        - if(key == "url")
+          - imageList.push(val);
+    each k in imageList
+      != "imageList.push('" + k + "');"
+    != "alert(imageList);"
+    != "</script>"
     != partial('partials/image', images)
 .cols
   .col-1

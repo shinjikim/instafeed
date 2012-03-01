@@ -7,8 +7,6 @@ html
     script(src="/socket.io/socket.io.js", type="text/javascript")
     script(src="/static/scripts/jquery-1.5.min.js", type="text/javascript")
     script(src="/static/scripts/master.js", type="text/javascript")
-    script(src="/static/scripts/jquery.simplyscroll.js", type="text/javascript")
-    script(src="/static/scripts/jquery.imageScroller.js", type="text/javascript")
     script(src="/static/scripts/jquery.timers.js", type="text/javascript")
     script(src="/static/scripts/jquery.autoScroller.js", type="text/javascript")
 
@@ -17,5 +15,6 @@ html
       var socket = io.connect();
       $(document).ready(Media.positionAll);
   body
+    //#wrap
     .autoScroller-container
       !{body}

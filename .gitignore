@@ -1,1 +1,6 @@
 .DS_Store
+node_modules
+conf
+.rvmrc
+Gemfile
+Gemfile.lock
